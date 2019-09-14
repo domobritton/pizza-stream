@@ -6,8 +6,13 @@ exports[`Loader snapshot-1 1`] = `
 >
   <img
     alt="loading"
-    className="css-kmx4e7"
+    className="css-16kb41"
     src="loading.gif"
+  />
+  <img
+    alt="loaded"
+    className="css-1svvr0w"
+    src="loading.svg"
   />
 </div>
 `;
@@ -17,8 +22,13 @@ exports[`Loader snapshot-2 1`] = `
   className="css-11zhy3w"
 >
   <img
+    alt="loading"
+    className="css-1svvr0w"
+    src="loading.gif"
+  />
+  <img
     alt="loaded"
-    className="css-kmx4e7"
+    className="css-16kb41"
     src="loading.svg"
   />
 </div>

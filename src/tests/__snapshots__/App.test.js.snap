@@ -173,8 +173,13 @@ exports[`App snapshot 1`] = `
       >
         <img
           alt="loading"
-          className="css-kmx4e7"
+          className="css-16kb41"
           src="loading.gif"
+        />
+        <img
+          alt="loaded"
+          className="css-1svvr0w"
+          src="loading.svg"
         />
       </div>
       <section

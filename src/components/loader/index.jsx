@@ -8,15 +8,19 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 
-const Image = styled.img`
-  height: 50px;
-`;
+const LoadingImg = styled.img({}, ({timer}) =>({
+  height: timer > 0 ? 50 : 0
+}))
+
+const LoadedImg = styled.img({}, ({timer}) => ({
+  height: timer <= 0 ? 50 : 0
+}))
 
 const Loader = ({timer}) => {
   return (
     <Wrapper>
-      {timer > 0 && <Image src={Loading} alt="loading" />}
-      {timer <= 0 && <Image src={Loaded} alt="loaded" />}
+      <LoadingImg src={Loading} alt="loading" timer={timer} />
+      <LoadedImg src={Loaded} alt="loaded" timer={timer} />
     </Wrapper>
   );
 };

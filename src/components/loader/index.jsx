@@ -6,6 +6,7 @@ import Loaded from './images/loading.svg';
 
 const Wrapper = styled.div`
   overflow: hidden;
+  height: 50px;
 `;
 
 const LoadingImg = styled.img({}, ({timer}) =>({

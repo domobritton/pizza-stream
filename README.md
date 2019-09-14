@@ -1,3 +1,16 @@
+I built Pizzastream's order status view in React, utilizing the new React Hooks API 🎉, HTML5 semantic tags, and Emotion styled components (CSS in Javascript). 
+
+![pizzastream image](pizzastream.png)
+
+Responsive styling down to and including a mobile phone layout that switches order status components in place, for a better mobile UX.
+
+![mobile view](pizzastream.gif)
+
+The page lighthouse audit performance is 100% and a11y accessibility is also 100%. 😀 Which is fantastic for SEO, and UX.
+
+![lighthouse score](pizzastream-lighthouse.png)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

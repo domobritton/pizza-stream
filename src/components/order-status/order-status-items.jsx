@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Deliver from './images/deliver.svg';
 import Make from './images/make-icon.svg';
 import Process from './images/process-icon.svg';
-import { GREY, WHITE, DARK_GREY } from '../../shared/style/colors';
+import { GREY, WHITE, DARK_GREY, BLUE } from '../../shared/style/colors';
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,12 +15,16 @@ const Wrapper = styled.section`
   box-sizing: border-box;
 `;
 
-const Header = styled.div`
-  background: ${GREY};
-  width: 100%;
-  padding: 10px 0 5px;
-  text-align: center;
-`;
+const Header = styled.div(
+  {
+    width: '100%',
+    padding: '10px 0 5px',
+    textAlign: 'center'
+  },
+  ({ active }) => ({
+    background: active ? BLUE : GREY
+  })
+);
 
 const Number = styled.div`
   font-size: 30px;
@@ -32,7 +36,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0 90px;
+  padding: 20px 0 75px;
 `;
 
 const Status = styled.div`
@@ -43,14 +47,22 @@ const Status = styled.div`
   margin-bottom: 20px;
 `;
 
-const Box = styled.div`
-  width: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${GREY};
-`;
+const Box = styled.div(
+  {
+    width: 200,
+    height: 200,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  ({ active }) => ({
+    background: active ? BLUE : GREY
+  })
+);
+
+const MessageBox = styled.div({}, ({ active }) => ({
+  opacity: active ? 1 : 0.5
+}));
 
 const Message = styled.div`
   font-size: 20px;
@@ -59,30 +71,32 @@ const Message = styled.div`
   margin-top: 26px;
 `;
 
-const OrderStatusItems = ({ id, status, message }) => {
+const OrderStatusItems = ({ id, status, message, active }) => {
   return (
     <Wrapper>
-      <Header>
+      <Header active={active}>
         <Number>{id}</Number>
       </Header>
       <Content>
         <Status>{status}</Status>
         {id === 1 && (
-          <Box>
-            <img src={Process} alt="process" />
+          <Box active={active}>
+            <img src={Process} alt="process order" />
           </Box>
         )}
         {id === 2 && (
-          <Box>
-            <img src={Make} alt="make" />
+          <Box active={active}>
+            <img src={Make} alt="make order" />
           </Box>
         )}
         {id === 3 && (
-          <Box>
-            <img src={Deliver} alt="deliver" />
+          <Box active={active}>
+            <img src={Deliver} alt="deliver order" />
           </Box>
         )}
-        <Message>{message}</Message>
+        <MessageBox active={active}>
+          <Message>{message}</Message>
+        </MessageBox>
       </Content>
     </Wrapper>
   );
@@ -91,7 +105,8 @@ const OrderStatusItems = ({ id, status, message }) => {
 OrderStatusItems.propTypes = {
   id: PropTypes.number.isRequired,
   status: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired
+  message: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired
 };
 
 export default OrderStatusItems;

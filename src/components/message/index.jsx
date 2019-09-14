@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { DARK_GREY } from '../../shared/style/colors';
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;

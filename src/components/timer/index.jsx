@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { DARK_GREY } from '../../shared/style/colors';
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px 0 0;
   color: ${DARK_GREY};
 `;
 
@@ -20,13 +21,17 @@ const Time = styled.div`
   line-height: 59px;
 `;
 
-const Timer = () => {
+const Timer = ({timer}) => {
   return (
     <Wrapper>
       <Wait>It'll take about</Wait>
-      <Time>60 minutes</Time>
+      <Time>{`${timer >= 0 ? timer : 0} minutes`}</Time>
     </Wrapper>
   );
 };
+
+Timer.propTypes = {
+  timer: PropTypes.number.isRequired
+}
 
 export default Timer;

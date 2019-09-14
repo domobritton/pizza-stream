@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer snapshot-1 1`] = `
+<section
+  className="css-qwrdz"
+>
+  <div
+    className="css-1b79e8j"
+  >
+    It'll take about
+  </div>
+  <div
+    className="css-1jz0aa"
+  >
+    60 minutes
+  </div>
+</section>
+`;
+
+exports[`Timer snapshot-2 1`] = `
+<section
+  className="css-qwrdz"
+>
+  <div
+    className="css-1b79e8j"
+  >
+    Your pizza has arrived!
+  </div>
+  <div
+    className="css-1jz0aa"
+  >
+    0 minutes
+  </div>
+</section>
+`;

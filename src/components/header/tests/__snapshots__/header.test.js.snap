@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshot 1`] = `
+<header
+  className="css-joc37h"
+>
+  <img
+    alt="Pizzastream"
+    className="css-1cb43wu"
+    src="logo.svg"
+  />
+</header>
+`;

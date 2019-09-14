@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message snapshot 1`] = `
+<section
+  className="css-1pz3047"
+>
+  <h2
+    className="css-1r6zqto"
+  >
+    Thanks for your order!
+  </h2>
+  <div
+    className="css-tbnkrp"
+  >
+    See below for the status of your pizza.
+  </div>
+</section>
+`;

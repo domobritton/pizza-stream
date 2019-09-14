@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot 1`] = `
+<div
+  className="css-iw2eyj"
+>
+  <div
+    className="css-1p48qb0"
+  >
+    <img
+      alt="pizza background left"
+      src="background.svg"
+      style={
+        Object {
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    />
+  </div>
+  <div
+    className="css-16khslc"
+  >
+    <main
+      className="css-mado61"
+    >
+      <header
+        className="css-joc37h"
+      >
+        <img
+          alt="Pizzastream"
+          className="css-1cb43wu"
+          src="logo.svg"
+        />
+      </header>
+      <section
+        className="css-1pz3047"
+      >
+        <h2
+          className="css-1r6zqto"
+        >
+          Thanks for your order!
+        </h2>
+        <div
+          className="css-tbnkrp"
+        >
+          See below for the status of your pizza.
+        </div>
+      </section>
+      <section
+        className="css-jgcvms"
+      >
+        <div
+          className="css-9k0804"
+        >
+          <div
+            className="css-124ym0a"
+          >
+            <div
+              className="css-wea8w4"
+            >
+              1
+            </div>
+          </div>
+          <div
+            className="css-1myn8t6"
+          >
+            <div
+              className="css-1aklsq2"
+            >
+              Processing your order
+            </div>
+            <div
+              className="css-1tquz7w"
+            >
+              <img
+                alt="process order"
+                src="process-icon.svg"
+              />
+            </div>
+            <div
+              className="css-whh5e5"
+            >
+              <div
+                className="css-9arwxm"
+              >
+                Checkin' it twice
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-9k0804"
+        >
+          <div
+            className="css-koctwx"
+          >
+            <div
+              className="css-wea8w4"
+            >
+              2
+            </div>
+          </div>
+          <div
+            className="css-1myn8t6"
+          >
+            <div
+              className="css-1aklsq2"
+            >
+              Making the pizza
+            </div>
+            <div
+              className="css-10ae224"
+            >
+              <img
+                alt="process order"
+                src="make-icon.svg"
+              />
+            </div>
+            <div
+              className="css-1tzeee1"
+            >
+              <div
+                className="css-9arwxm"
+              >
+                Kneadin', shapin', bakin'
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-9k0804"
+        >
+          <div
+            className="css-koctwx"
+          >
+            <div
+              className="css-wea8w4"
+            >
+              3
+            </div>
+          </div>
+          <div
+            className="css-1myn8t6"
+          >
+            <div
+              className="css-1aklsq2"
+            >
+              Delivering your pizza
+            </div>
+            <div
+              className="css-10ae224"
+            >
+              <img
+                alt="process order"
+                src="deliver-icon.svg"
+              />
+            </div>
+            <div
+              className="css-1tzeee1"
+            >
+              <div
+                className="css-9arwxm"
+              >
+                Deliverin'
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        className="css-11zhy3w"
+      >
+        <img
+          alt="loading"
+          className="css-kmx4e7"
+          src="loading.gif"
+        />
+      </div>
+      <section
+        className="css-qwrdz"
+      >
+        <div
+          className="css-1b79e8j"
+        >
+          It'll take about
+        </div>
+        <div
+          className="css-1jz0aa"
+        >
+          60 minutes
+        </div>
+      </section>
+    </main>
+  </div>
+  <div
+    className="css-1p48qb0"
+  >
+    <img
+      alt="pizza background right"
+      src="background.svg"
+      style={
+        Object {
+          "left": 15,
+          "position": "absolute",
+        }
+      }
+    />
+  </div>
+</div>
+`;

@@ -6,7 +6,7 @@ import Pizzas from './background.svg';
 import Header from './components/header';
 import Message from './components/message';
 import OrderStatus from './components/order-status';
-import Loading from './components/loading';
+import Loader from './components/loader';
 import Timer from './components/timer';
 
 const Page = styled.div`
@@ -67,9 +67,8 @@ const App = () => {
 
 
   useInterval(() => {
-    // eslint-disable-next-line no-shadow
     setTimer(timer => timer - 1);
-  }, timer > 0 ? 250 : null);
+  }, timer > 0 ? 500 : null);
 
   return (
     <Page>
@@ -85,7 +84,7 @@ const App = () => {
           <Header />
           <Message />
           <OrderStatus timer={timer} />
-          <Loading timer={timer} />
+          <Loader timer={timer} />
           <Timer timer={timer} />
         </Content>
       </Center>

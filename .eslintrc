@@ -13,7 +13,8 @@
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
     "import/prefer-default-export": "off",
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "no-shadowed-variable": true
   },
   "globals": {
     "window": true,

@@ -14,12 +14,24 @@ const Title = styled.h2`
   font-size: 40px;
   line-height: 47px;
   color: ${DARK_GREY};
+
+  @media all and (max-width: 767px) {
+    font-size: 28px;
+  }
 `;
 
 const Status = styled.div`
   font-size: 30px;
   line-height: 35px;
   color: ${DARK_GREY};
+
+  @media all and (max-width: 767px) {
+    font-size: 19px;
+  }
+
+  @media all and (max-width: 360px) {
+    font-size: 15px;
+  }
 `;
 
 const Message = () => {

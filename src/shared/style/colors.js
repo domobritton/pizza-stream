@@ -4,3 +4,4 @@ export const BLUE = '#2E86AB';
 export const DARK_GREY = '#565554';
 export const GREY = '#EBEBEB';
 export const WHITE = '#FFFFFF';
+export const BORDER = '#D8D8D8';

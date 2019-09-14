@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderStatus snapshot-1 1`] = `
+<section
+  className="css-jgcvms"
+>
+  <div
+    className="css-9k0804"
+  >
+    <div
+      className="css-124ym0a"
+    >
+      <div
+        className="css-wea8w4"
+      >
+        1
+      </div>
+    </div>
+    <div
+      className="css-1myn8t6"
+    >
+      <div
+        className="css-1aklsq2"
+      >
+        Processing your order
+      </div>
+      <div
+        className="css-1tquz7w"
+      >
+        <img
+          alt="process order"
+          src="process-icon.svg"
+        />
+      </div>
+      <div
+        className="css-whh5e5"
+      >
+        <div
+          className="css-9arwxm"
+        >
+          Checkin' it twice
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-9k0804"
+  >
+    <div
+      className="css-koctwx"
+    >
+      <div
+        className="css-wea8w4"
+      >
+        2
+      </div>
+    </div>
+    <div
+      className="css-1myn8t6"
+    >
+      <div
+        className="css-1aklsq2"
+      >
+        Making the pizza
+      </div>
+      <div
+        className="css-10ae224"
+      >
+        <img
+          alt="process order"
+          src="make-icon.svg"
+        />
+      </div>
+      <div
+        className="css-1tzeee1"
+      >
+        <div
+          className="css-9arwxm"
+        >
+          Kneadin', shapin', bakin'
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-9k0804"
+  >
+    <div
+      className="css-koctwx"
+    >
+      <div
+        className="css-wea8w4"
+      >
+        3
+      </div>
+    </div>
+    <div
+      className="css-1myn8t6"
+    >
+      <div
+        className="css-1aklsq2"
+      >
+        Delivering your pizza
+      </div>
+      <div
+        className="css-10ae224"
+      >
+        <img
+          alt="process order"
+          src="deliver-icon.svg"
+        />
+      </div>
+      <div
+        className="css-1tzeee1"
+      >
+        <div
+          className="css-9arwxm"
+        >
+          Deliverin'
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`OrderStatus snapshot-2 1`] = `
+<section
+  className="css-jgcvms"
+>
+  <div
+    className="css-9k0804"
+  >
+    <div
+      className="css-124ym0a"
+    >
+      <div
+        className="css-wea8w4"
+      >
+        1
+      </div>
+    </div>
+    <div
+      className="css-1myn8t6"
+    >
+      <div
+        className="css-1aklsq2"
+      >
+        Processing your order
+      </div>
+      <div
+        className="css-1tquz7w"
+      >
+        <img
+          alt="process order"
+          src="process-icon.svg"
+        />
+      </div>
+      <div
+        className="css-whh5e5"
+      >
+        <div
+          className="css-9arwxm"
+        >
+          Checkin' it twice
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-9k0804"
+  >
+    <div
+      className="css-koctwx"
+    >
+      <div
+        className="css-wea8w4"
+      >
+        2
+      </div>
+    </div>
+    <div
+      className="css-1myn8t6"
+    >
+      <div
+        className="css-1aklsq2"
+      >
+        Making the pizza
+      </div>
+      <div
+        className="css-10ae224"
+      >
+        <img
+          alt="process order"
+          src="make-icon.svg"
+        />
+      </div>
+      <div
+        className="css-1tzeee1"
+      >
+        <div
+          className="css-9arwxm"
+        >
+          Kneadin', shapin', bakin'
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-9k0804"
+  >
+    <div
+      className="css-koctwx"
+    >
+      <div
+        className="css-wea8w4"
+      >
+        3
+      </div>
+    </div>
+    <div
+      className="css-1myn8t6"
+    >
+      <div
+        className="css-1aklsq2"
+      >
+        Delivering your pizza
+      </div>
+      <div
+        className="css-10ae224"
+      >
+        <img
+          alt="process order"
+          src="deliver-icon.svg"
+        />
+      </div>
+      <div
+        className="css-1tzeee1"
+      >
+        <div
+          className="css-9arwxm"
+        >
+          Deliverin'
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

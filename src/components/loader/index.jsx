@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
-import Loader from './images/loading.gif';
+import Loading from './images/loading.gif';
 import Loaded from './images/loading.svg';
 
 const Wrapper = styled.div`
@@ -12,17 +12,17 @@ const Image = styled.img`
   height: 50px;
 `;
 
-const Loading = ({timer}) => {
+const Loader = ({timer}) => {
   return (
     <Wrapper>
-      {timer > 0 && <Image src={Loader} alt="loading" />}
+      {timer > 0 && <Image src={Loading} alt="loading" />}
       {timer <= 0 && <Image src={Loaded} alt="loaded" />}
     </Wrapper>
   );
 };
 
-Loading.propTypes = {
+Loader.propTypes = {
   timer: PropTypes.number.isRequired
 }
 
-export default Loading;
+export default Loader;

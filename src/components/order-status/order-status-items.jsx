@@ -1,17 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
-import Deliver from './images/deliver.svg';
-import Make from './images/make-icon.svg';
-import Process from './images/process-icon.svg';
 import { GREY, WHITE, DARK_GREY, BLUE } from '../../shared/style/colors';
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: 1px solid #d8d8d8;
-  border-right: 1px solid #d8d8d8;
   box-sizing: border-box;
 `;
 
@@ -21,8 +16,9 @@ const Header = styled.div(
     padding: '10px 0 5px',
     textAlign: 'center'
   },
-  ({ active }) => ({
-    background: active ? BLUE : GREY
+  ({ active, completed }) => ({
+    background: active ? BLUE : GREY,
+    opacity: completed ? 0.5 : 1
   })
 );
 
@@ -55,13 +51,14 @@ const Box = styled.div(
     justifyContent: 'center',
     alignItems: 'center'
   },
-  ({ active }) => ({
-    background: active ? BLUE : GREY
+  ({ active, completed }) => ({
+    background: active ? BLUE : GREY,
+    opacity: completed ? 0.5 : 1
   })
 );
 
-const MessageBox = styled.div({}, ({ active }) => ({
-  opacity: active ? 1 : 0.5
+const MessageBox = styled.div({}, ({ active, completed }) => ({
+  opacity: active && !completed ? 1 : 0.5
 }));
 
 const Message = styled.div`
@@ -71,30 +68,18 @@ const Message = styled.div`
   margin-top: 26px;
 `;
 
-const OrderStatusItems = ({ id, status, message, active }) => {
+const OrderStatusItems = ({ id, status, message, active, completed, img }) => {
   return (
     <Wrapper>
-      <Header active={active}>
+      <Header active={active} completed={completed}>
         <Number>{id}</Number>
       </Header>
       <Content>
         <Status>{status}</Status>
-        {id === 1 && (
-          <Box active={active}>
-            <img src={Process} alt="process order" />
+        <Box active={active} completed={completed}>
+            <img src={img} alt="process order" />
           </Box>
-        )}
-        {id === 2 && (
-          <Box active={active}>
-            <img src={Make} alt="make order" />
-          </Box>
-        )}
-        {id === 3 && (
-          <Box active={active}>
-            <img src={Deliver} alt="deliver order" />
-          </Box>
-        )}
-        <MessageBox active={active}>
+        <MessageBox active={active} completed={completed}>
           <Message>{message}</Message>
         </MessageBox>
       </Content>
@@ -106,7 +91,9 @@ OrderStatusItems.propTypes = {
   id: PropTypes.number.isRequired,
   status: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired
+  active: PropTypes.bool.isRequired,
+  completed: PropTypes.bool.isRequired,
+  img: PropTypes.string.isRequired
 };
 
 export default OrderStatusItems;

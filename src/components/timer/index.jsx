@@ -9,9 +9,13 @@ const Wrapper = styled.section`
   align-items: center;
   padding: 30px 0 0;
   color: ${DARK_GREY};
+
+  @media all and (max-width: 767px) {
+    padding-bottom: 30px;
+  }
 `;
 
-const Wait = styled.div`
+const Message = styled.div`
   font-size: 30px;
   line-height: 35px;
 `;
@@ -22,9 +26,10 @@ const Time = styled.div`
 `;
 
 const Timer = ({timer}) => {
+  const message = timer === 0 ? "Your pizza has arrived!" : "It'll take about";
   return (
     <Wrapper>
-      <Wait>It'll take about</Wait>
+      <Message>{message}</Message>
       <Time>{`${timer >= 0 ? timer : 0} minutes`}</Time>
     </Wrapper>
   );

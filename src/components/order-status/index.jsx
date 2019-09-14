@@ -1,67 +1,43 @@
 /* eslint-disable no-shadow */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { BORDER } from '../../shared/style/colors';
 
 import OrderStatusItems from './order-status-items';
+import useCounter from './hooks/useCounter';
+import useWindowResize from './hooks/useWindowResize';
 
 const Wrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+
+  > div:nth-of-type(2) {
+    border-left: 1px solid ${BORDER};
+    border-right: 1px solid ${BORDER};
+  }
+
+  @media all and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-const items = [
-  {
-    id: 1,
-    status: 'Processing your order',
-    message: "Checkin' it twice",
-    active: true
-  },
-  {
-    id: 2,
-    status: 'Making the pizza',
-    message: "Kneadin', shapin', bakin'",
-    active: false
-  },
-  {
-    id: 3,
-    status: 'Delivering your pizza',
-    message: "Deliverin'",
-    active: false
-  }
-];
-
 const OrderStatus = ({ timer }) => {
-  const [data, setData] = useState(items);
-
-  const updateField = timer => {
-    const newD = [...data];
-    if (timer === 30) {
-      newD[0].active = false;
-      newD[1].active = true;
-      return () => setData(newD);
-    } 
-    if (timer === 10) {
-      newD[1].active = false;
-      newD[2].active = true;
-      return () => setData(newD);
-    }
-    return null;
-  };
-
-  useEffect(() => {
-    updateField(timer);
-  }, [timer]);
-
+  const data = useCounter(timer);
+  const { width } = useWindowResize();
+  const filteredData =
+    width < 768 ? data.filter(item => item.mobile === true) : data;
   return (
     <Wrapper>
-      {data.map(({ id, status, message, active }) => (
+      {filteredData.map(({ id, status, message, active, completed, img }) => (
         <OrderStatusItems
           key={id}
           id={id}
           status={status}
           message={message}
           active={active}
+          completed={completed}
+          img={img}
         />
       ))}
     </Wrapper>
